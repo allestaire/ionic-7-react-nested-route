@@ -21,6 +21,7 @@ import '@ionic/react/css/display.css';
 
 /* Theme variables */
 import './theme/variables.css';
+import Dashboard from './pages/Dashboard/index'
 
 setupIonicReact();
 
@@ -30,6 +31,9 @@ const App: React.FC = () => (
       <IonRouterOutlet>
         <Route exact path="/home">
           <Home />
+        </Route>
+        <Route exact path="/dashboard">
+          <Dashboard />
         </Route>
         <Route exact path="/">
           <Redirect to="/home" />

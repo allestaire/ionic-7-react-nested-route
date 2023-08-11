@@ -1,27 +1,25 @@
 import { IonButton, IonContent, IonHeader, IonPage, IonTitle, IonToolbar } from '@ionic/react';
-import ExploreContainer from '../components/ExploreContainer';
-import './Home.css';
 import { useHistory } from 'react-router';
 
-const Home: React.FC = () => {
+const Home = () => {
   const history = useHistory()
-  const handleGotoDashboard = () => {
-    history.push('/dashboard')
+  const handleGotoProfile = () => {
+    history.push('/dashboard/profile')
   }
   return (
     <IonPage>
       <IonHeader>
         <IonToolbar>
-          <IonTitle>Login</IonTitle>
+          <IonTitle>Home</IonTitle>
         </IonToolbar>
       </IonHeader>
       <IonContent fullscreen>
         <IonHeader collapse="condense">
           <IonToolbar>
-            <IonTitle size="large">Login</IonTitle>
+            <IonTitle size="large">Home</IonTitle>
           </IonToolbar>
         </IonHeader>
-        <IonButton onClick={handleGotoDashboard}>Go to Dashboard</IonButton>
+        <IonButton onClick={handleGotoProfile}>Go to Profile</IonButton>
       </IonContent>
     </IonPage>
   );
